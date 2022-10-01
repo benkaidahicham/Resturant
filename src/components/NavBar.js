@@ -1,17 +1,14 @@
-import React,{ useState} from "react";
-import { Col, Container, Nav, Navbar } from "react-bootstrap";
+import React,{ useCallback, useState} from "react";
+import { Col, Container, Form, FormControl, Nav, Navbar } from "react-bootstrap";
 
 
 const NavBar =({filterbysearch})=> { 
   
-    const [searchvalue, setsearchvalue] = useState('')
-    const onSearch=(e) => {
-      e.preventDefault()
+    const [searchvalue, setsearchvalue] = useState('');
+    const onSearch =() => {
       filterbysearch(searchvalue)
-      setsearchvalue('')
+      setsearchvalue("")
       }
-      
-      
     return(
       <Col>
         <Navbar bg="dark" variant="dark" expand="lg">
@@ -25,15 +22,13 @@ const NavBar =({filterbysearch})=> {
             navbarScroll
           >
           </Nav>
-          
             <input className="d-flex mx-2"
               type="text"
               placeholder="بحث..."
               onChange={(e)=>setsearchvalue(e.target.value)}
               value={searchvalue}
             />
-            <button onClick={(e)=>onSearch(e)} className="btn-search">بحث</button>
-          
+            <button onClick={()=>onSearch()} className="btn-search">بحث</button>
         </Navbar.Collapse>
       </Container>
     </Navbar>

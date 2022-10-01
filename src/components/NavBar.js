@@ -2,7 +2,7 @@ import React,{ useState} from "react";
 import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
 
-const NavBar =({filterbysearch ,itemsData})=> { 
+const NavBar =({filterbysearch})=> { 
   
     const [searchvalue, setsearchvalue] = useState('')
     const onSearch=() => {

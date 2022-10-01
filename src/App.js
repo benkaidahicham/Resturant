@@ -25,7 +25,7 @@ function App() {
   }}
   return (
     <div className="App">
-      <NavBar filterbysearch={filterbysearch} itemsData={itemsData}/>
+      <NavBar filterbysearch={filterbysearch} />
       <Container>
       <Header/>
       <Category filterbyCategory={filterbyCategory} allCategory={allCategory}/>

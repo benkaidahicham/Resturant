@@ -1,15 +1,15 @@
-import React,{useCallback, useState} from "react";
+import React,{ useState} from "react";
 import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
 
 const NavBar =({filterbysearch})=> { 
   
     const [searchvalue, setsearchvalue] = useState('')
-    const onSearch = useCallback(() => {
+    const onSearch=() => {
       filterbysearch(searchvalue)
-      }, [
-      searchvalue, filterbysearch
-      ])
+      }
+      
+      
     return(
       <Col>
         <Navbar bg="dark" variant="dark" expand="lg">

@@ -5,8 +5,9 @@ import { Col, Container, Nav, Navbar } from "react-bootstrap";
 const NavBar =({filterbysearch})=> { 
   
     const [searchvalue, setsearchvalue] = useState('')
-    const onSearch=() => {
-      filterbysearch(searchvalue);
+    const onSearch=(e) => {
+      e.preventDefault()
+      filterbysearch(searchvalue)
       setsearchvalue('')
       }
       
@@ -31,7 +32,7 @@ const NavBar =({filterbysearch})=> {
               onChange={(e)=>setsearchvalue(e.target.value)}
               value={searchvalue}
             />
-            <button onClick={()=>onSearch()} className="btn-search">بحث</button>
+            <button onClick={(e)=>onSearch(e)} className="btn-search">بحث</button>
           
         </Navbar.Collapse>
       </Container>

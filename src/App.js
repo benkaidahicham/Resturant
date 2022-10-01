@@ -19,9 +19,9 @@ function App() {
   }}
   const allCategory=["الكل",...new Set(items.map((i)=>i.category))]
   const filterbysearch = (word) => {
-    if(word !== ""){
-    const newArry = items.filter((item)=> item.titel === word)
-    setitemsDate(newArry)
+     if(word !== ""){
+     const newArry = items.filter((item)=> item.titel === word)
+     setitemsDate(newArry)
   }}
   return (
     <div className="App">

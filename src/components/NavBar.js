@@ -2,11 +2,12 @@ import React,{ useState} from "react";
 import { Col, Container, Nav, Navbar } from "react-bootstrap";
 
 
-const NavBar =({filterbysearch})=> { 
+const NavBar =({filterbysearch ,itemsData})=> { 
   
     const [searchvalue, setsearchvalue] = useState('')
     const onSearch=() => {
-      filterbysearch(searchvalue)
+      filterbysearch(searchvalue);
+      setsearchvalue('')
       }
       
       

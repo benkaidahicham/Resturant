@@ -1,10 +1,12 @@
 import React from 'react'
 import { Card, Col ,Row} from 'react-bootstrap'
+import Zoom from 'react-reveal/Zoom';
 
  function CardItem({itemsData}) {
 
   return (
     <Row >
+      <Zoom >
       {
         itemsData.length >= 1 ?(itemsData.map((item)=>{
         
@@ -26,7 +28,7 @@ import { Card, Col ,Row} from 'react-bootstrap'
           )
         })) : <h1 className='text-center'>لا توجد اصناف</h1>
       }
-        
+        </Zoom>
     </Row>
   )
 }
